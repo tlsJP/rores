@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Bundle of Fireworks",
+    "icon": "bundle-of-fireworks",
+    "proc": 0.2
+  },
+  {
+    "name": "AtG Missile Mk.1",
+    "icon": "atg-missile",
+    "proc": 1.0
+  },
+  {
+    "name": "Will-o'-the-Wisp",
+    "icon": "will-o-the-wisp",
+    "proc": 1.0,
+    "flags": ["aoe"]
+  },
+  {
+    "name": "Disposable Missile Launcher",
+    "icon": "disposable-missile-launcher",
+    "proc": "12 * 1.0"
+  }
+]

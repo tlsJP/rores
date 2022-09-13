@@ -1,0 +1,125 @@
+[
+  {
+    "name": "Commando",
+    "portrait": "commando",
+    "abilities": [
+      {
+        "name": "Double Tap",
+        "icon": "double-tap",
+        "proc": "1.0"
+      },
+      {
+        "name": "Phase Round",
+        "icon": "phase-round",
+        "proc": "1.0",
+        "flags": ["pierce"]
+      },
+      {
+        "name": "Phase Blast",
+        "icon": "phase-blast",
+        "proc": "8 * 0.5",
+        "flags": ["multi_hit"]
+      },
+      {
+        "name": "Suppressive Fire",
+        "icon": "suppressive-fire",
+        "proc": "6+ * 1.0",
+        "flags": ["multi_hit", "attack_speed"]
+      },
+      {
+        "name": "Frag Grenade",
+        "icon": "frag-grenade",
+        "proc": "1.0",
+        "flags": ["aoe"]
+      }
+    ]
+  },
+  {
+    "name": "Huntress",
+    "portrait": "huntress",
+    "abilities": [
+      {
+        "name": "Strafe",
+        "icon": "strafe",
+        "proc": "1.0"
+      },
+      {
+        "name": "Flurry",
+        "icon": "flurry",
+        "proc": "3 * 0.7\n(6 * 0.7 on crit)",
+        "flags": ["multi_hit"]
+      },
+      {
+        "name": "Laser Glaive",
+        "icon": "laser-glaive",
+        "proc": "0.8",
+        "flags": ["multi_hit"]
+      },
+      {
+        "name": "Arrow rain",
+        "icon": "arrow-rain",
+        "proc": "19 * 0.2",
+        "flags": ["multi_hit"]
+      },
+      {
+        "name": "Ballista",
+        "icon": "ballista",
+        "proc": "1.0"
+      }
+    ]
+  },
+  {
+    "name": "Artificer",
+    "portrait": "artificer",
+    "abilities": [
+      {
+        "name": "Flame Bolt",
+        "icon": "flame-bolt",
+        "proc": "1.0",
+        "flags": ["aoe"]
+      },
+      {
+        "name": "Plasma Bolt",
+        "icon": "plasma-bolt",
+        "proc": "1.0",
+        "flags": ["aoe"]
+      },
+      {
+        "name": "Charged Nano-Bomb",
+        "icon": "charged-nano-bomb",
+        "proc": "1.0",
+        "flags": ["aoe"]
+      },
+      {
+        "name": "Sparks of [Charged Nano-Bomb]",
+        "icon": "charged-nano-bomb",
+        "proc": "0.3",
+        "flags": []
+      },
+      {
+        "name": "Cast Nano-Spear",
+        "icon": "cast-nano-spear",
+        "proc": "1.0",
+        "flags": ["pierce"]
+      },
+      {
+        "name": "Snapfreeze",
+        "icon": "snapfreeze",
+        "proc": "12 * 1.0",
+        "flags": ["multi_hit"]
+      },
+      {
+        "name": "Flamethrower",
+        "icon": "flamethrower",
+        "proc": "22+ * 1.0",
+        "flags": ["attack_speed", "pierce"]
+      },
+      {
+        "name": "Ion Surge",
+        "icon": "ion-surge",
+        "proc": "1.0",
+        "flags": ["aoe"]
+      }
+    ]
+  }
+]
