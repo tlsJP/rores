@@ -1,0 +1,44 @@
+@tailwind components;
+
+@layer components {
+  .rr-box {
+    --corner-color: theme("colors.white");
+    --corner-width: 0.1rem;
+    --shadow-width: 0.4rem;
+
+    position: relative;
+    box-shadow: inset 0 0 0 var(--shadow-width) theme("colors.paleblue");
+    background-color: theme("colors.darkblue");
+    border: 0.051rem solid theme("colors.gray");
+  }
+
+  .no-rr-box {
+    box-shadow: none;
+    border: none;
+  }
+
+  .rr-box__corners {
+    position: absolute;
+    z-index: 9;
+    top: calc(-0.05rem - 0.5px);
+    left: calc(-0.05rem - 0.5px);
+
+    width: calc(100% + 0.1rem + 1px);
+    height: calc(100% + 0.1rem + 1px);
+    pointer-events: none;
+
+    /* prettier-ignore */
+    background: 
+      linear-gradient(to right, var(--corner-color) var(--corner-width), transparent var(--corner-width)) 0 0,
+      linear-gradient(to right, var(--corner-color) var(--corner-width), transparent var(--corner-width)) 0 100%,
+      linear-gradient(to left, var(--corner-color) var(--corner-width), transparent var(--corner-width)) 100% 0,
+      linear-gradient(to left, var(--corner-color) var(--corner-width), transparent var(--corner-width)) 100% 100%,
+      linear-gradient(to bottom, var(--corner-color) var(--corner-width), transparent var(--corner-width)) 0 0,
+      linear-gradient(to bottom, var(--corner-color) var(--corner-width), transparent var(--corner-width)) 100% 0,
+      linear-gradient(to top, var(--corner-color) var(--corner-width), transparent var(--corner-width)) 0 100%,
+      linear-gradient(to top, var(--corner-color) var(--corner-width), transparent var(--corner-width)) 100% 100%;
+
+    background-repeat: no-repeat;
+    background-size: 0.35rem 0.35rem;
+  }
+}

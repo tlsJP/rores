@@ -1,0 +1,87 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import characterDataJson from "../../public/data/character-proc.json";
+import itemDataJson from "../../public/data/item-proc.json";
+
+import type { Character, Item } from "$components/coefficients/types";
+import CharacterList from "$components/coefficients/CharacterList.svelte";
+import ItemRow from "$components/coefficients/ItemRow.svelte";
+import Legend from "$components/coefficients/Legend.svelte";
+
+import "$styles/box.css";
+
+const characterData = characterDataJson as Character[];
+const itemData = itemDataJson as Item[];
+
+const videos = [
+  {
+    title: "ICap_l - What are Proc Coefficients...?",
+    link: "https://youtu.be/TaWA_03Shd0",
+  },
+  {
+    title: "Disputed Origin - Risk of Rain 2s Hidden Mechanic",
+    link: "https://youtu.be/vZUgcta_ue8",
+  },
+];
+---
+
+<BaseLayout title="Proc coefficients">
+  <header>
+    <h1 class="sr-only">Proc Coefficients</h1>
+  </header>
+  <main class="my-2 mx-2 pb-16 md:rr-box md:p-4 lg:max-w-6xl lg:mx-auto">
+    <div class="rr-box col-span-full mb-2 p-3 font-game md:no-rr-box">
+      {
+        videos.map((v) => (
+          <a
+            href={v.link}
+            target="_blank"
+            class="flex items-center gap-2 mb-1 hover:underline"
+          >
+            <img
+              src="https://cdn.cdnlogo.com/logos/y/57/youtube-icon.svg"
+              width="32"
+              class="inline"
+            />
+            <span class="leading-4">{v.title}</span>
+          </a>
+        ))
+      }
+      <div class="rr-box__corners md:hidden"></div>
+    </div>
+    <div class="md:grid grid-cols-2 gap-2">
+      <!-- Character list -->
+      <section class="column rr-box p-3 mb-3 md:mb-0">
+        <h2 class="font-game text-2xl text-center mb-2">Survivors</h2>
+        <CharacterList client:load characters={characterData} />
+        <div class="rr-box__corners"></div>
+      </section>
+
+      <!-- Item list -->
+      <section class="column rr-box p-3">
+        <h2 class="font-game text-2xl text-center mb-2">Items</h2>
+        <ul>
+          {itemData.map((item) => <ItemRow item={item} />)}
+        </ul>
+        <div class="rr-box__corners"></div>
+      </section>
+    </div>
+
+    <Legend client:load />
+    <div class="rr-box__corners hidden md:block"></div>
+  </main>
+</BaseLayout>
+
+<style>
+  header {
+    height: calc(100vw / 9.1);
+    background-image: url("https://via.placeholder.com/1932x211?text=Proc%20Coefficients");
+    background-size: auto 100%;
+    color: #ffa500;
+  }
+
+  .column.rr-box {
+    --shadow-width: 0.3rem;
+  }
+</style>
