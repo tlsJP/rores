@@ -11,9 +11,13 @@ yarn dev
 
 ## Build and deploy
 
-```sh
+```
+# build the project
 yarn build
-# then what?
+
+# to start server at localhost:3000/rores/
+yarn run dev
+
 ```
 
 ## Packages used
